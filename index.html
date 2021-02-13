@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMISSION</title>
+    <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+        background-color: burlywood;
+      }
+   h3{
+     font-size: 20px ;
+     font-weight: 550;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color: brown;
+     text-align: center;
+   }
+
+
+    </style>
+  </head>
+  <body></body>
+  <script>
+    function yeschiled(){
+      let chld = prompt("Enter your Chiled Name sperate by Comma ");
+        let child = chld.split(",");
+        let len = 0;
+        let childamt = 0;
+        for (let i = 0; i < child.length; i++) {
+          if(child[i]==""){
+            break;
+          }
+          else{
+          len++;
+        }
+      }
+        let preamount = len * ((5000 * 10) / 100);
+        // document.writeln("<h3>" + child + "</h3>");
+        document.writeln("<h3>TOTAL MEMBER :" + (len + 1) + "</h3>");
+        document.writeln("<h3>COMISSION DETAILS :</h3>");
+        document.writeln("<h3>" + parent + " : " + preamount + " INR </h3>");
+        for (let i = 0; i < child.length; i++) {
+          if(child[i]==""){
+            break;
+          }
+          else{
+
+          childamt = (5000 * 5) / 100;
+          document.writeln("<h3>" + child[i] + " : " + childamt + " INR </h3>");
+          }
+        }
+    }
+    function nochield(){
+      document.writeln("<h3>TOTAL MEMBER :" + 1 + "</h3>");
+        document.writeln("<h3>COMISSION DETAILS :</h3>");
+        let preAmout = (5000 * 5) / 100;
+        document.writeln("<h3>" + parent + " : " + preAmout + " INR </h3>");
+    }
+
+    // main function 
+    let parent = prompt("Enter Your Name",["Enter the Name"]);
+     console.log(parent[0]);
+    if (parent!== null && parent!== undefined && parent.trim()!="" && ((parent[0]>="A" && parent[0]<="Z") || (parent[0]>="a" && parent[0]<="z"))) {
+      let Chield = prompt("Have you chield? Y or N",['Y or N']);
+      if (Chield === "Y" || Chield === "y") {
+        yeschiled();
+      } else if (Chield=== "N" || Chield ==="n") {
+        nochield();
+      } else {
+        alert("Enter the Valid Options Y or N ");
+        let child= prompt("Have you chield? Please choose correct option!'Y' or 'N' ");
+     if(child[0]=="Y" || child[0]=="y")
+     {
+      yeschiled();
+     }
+     else if (Chield[0] ==="N" || Chield[0] ==="n") {
+        nochield();
+      } 
+      }
+    } else {
+      alert("Please Enter the Name ");
+     
+    }
+
+
+
+  </script>
+</html>
